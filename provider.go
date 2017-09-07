@@ -1,8 +1,11 @@
 package PackageE
 
-import "github.com/ChinmayR/PackageC"
+import (
+	"os"
 
-func FuncInPackageE() string {
-	return "From PackageE: " + PackageC.FuncInPackageC()
+	"github.com/urfave/cli"
+)
+
+func FuncInPackageE() {
+	cli.NewApp().Run(os.Args)
 }
-
